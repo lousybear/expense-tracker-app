@@ -1,6 +1,9 @@
-export interface IExpenseDetail {
-    id: string;
-    title: string;
-    amount: number;
-    date: Date;
+export interface IExpenseDate {
+  date: Date;
+}
+
+export interface IExpenseDetail extends IExpenseDate {
+  id: string;
+  title: string;
+  amount: number;
 }

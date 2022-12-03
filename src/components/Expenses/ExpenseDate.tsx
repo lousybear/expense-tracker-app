@@ -1,5 +1,5 @@
 import React from "react";
-import { IExpenseDate } from "../types";
+import { IExpenseDate } from "../../types";
 import "./ExpenseDate.css";
 
 export default function ExpenseDate(props: IExpenseDate) {

@@ -1,8 +1,8 @@
 import React from "react";
 import ExpenseDate from "./ExpenseDate";
-import { IExpenseDetail } from "../types";
+import { IExpenseDetail } from "../../types";
 import "./ExpenseItem.css";
-import Card from "./Card";
+import Card from "../UI/Card";
 
 export default function ExpenseItem(props: IExpenseDetail) {
   return (

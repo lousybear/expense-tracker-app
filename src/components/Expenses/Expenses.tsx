@@ -7,7 +7,6 @@ import "./Expenses.css";
 
 export default function Expenses(props: any) {
   const [filteredYear, setFilteredYear] = useState("2022");
-
   const filterChangeHandler = (selectedYear: any) => {
     setFilteredYear(selectedYear);
   };
@@ -15,6 +14,18 @@ export default function Expenses(props: any) {
     (expense: any) =>
       new Date(expense.date).getFullYear().toString() === filteredYear
   );
+  let expenseContent = <p>No expense found.</p>;
+
+  if (filteredExpenses.length > 0) {
+    expenseContent = filteredExpenses.map((expense: any) => (
+      <ExpenseItem
+        key={expense.id}
+        title={expense.title}
+        amount={expense.amount}
+        date={expense.date}
+      />
+    ));
+  }
 
   return (
     <div>
@@ -23,18 +34,7 @@ export default function Expenses(props: any) {
           selected={filteredYear}
           onSelectYear={filterChangeHandler}
         />
-        {filteredExpenses.length === 0 ? (
-          <p>No expense found.</p>
-        ) : (
-          filteredExpenses.map((expense: any) => (
-            <ExpenseItem
-              key={expense.id}
-              title={expense.title}
-              amount={expense.amount}
-              date={expense.date}
-            />
-          ))
-        )}
+        {expenseContent}
       </Card>
     </div>
   );

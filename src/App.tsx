@@ -8,7 +8,7 @@ const INITIAL_EXPENSES = [
     id: "e1",
     title: "Udupi Dinner",
     amount: 180,
-    date: new Date(2022, 12, 2),
+    date: new Date(2022, 10, 2),
   },
   {
     id: "e2",
@@ -20,13 +20,25 @@ const INITIAL_EXPENSES = [
     id: "e3",
     title: "House Rent",
     amount: 9000,
-    date: new Date(2022, 12, 1),
+    date: new Date(2022, 10, 1),
   },
   {
     id: "e4",
     title: "Paint Supplies",
     amount: 150,
     date: new Date(2022, 11, 10),
+  },
+  {
+    id: "e5",
+    title: "Home Supplies",
+    amount: 6550,
+    date: new Date(2021, 11, 10),
+  },
+  {
+    id: "e6",
+    title: "Shoes",
+    amount: 5150,
+    date: new Date(2021, 11, 10),
   },
 ];
 

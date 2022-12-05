@@ -3,7 +3,6 @@ export interface IExpenseDate {
 }
 
 export interface IExpenseDetail extends IExpenseDate {
-  id: string;
   title: string;
   amount: number;
 }

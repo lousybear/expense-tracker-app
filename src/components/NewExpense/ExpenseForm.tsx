@@ -22,7 +22,7 @@ export default function ExpenseForm(props: any) {
     event.preventDefault();
     const expenseData = {
       title,
-      amount,
+      amount: +amount,
       date,
     };
     props.onSaveExpenseData(expenseData);

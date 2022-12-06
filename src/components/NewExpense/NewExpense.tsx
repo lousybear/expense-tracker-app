@@ -23,7 +23,9 @@ export default function NewExpense(props: any) {
 
   return (
     <div className="new-expense">
-      {!addExpense && <button onClick={loadAddExpenseForm}>Add Expense</button>}
+      {!addExpense && (
+        <button onClick={loadAddExpenseForm}>Add New Expense</button>
+      )}
       {addExpense && (
         <ExpenseForm
           onSaveExpenseData={saveExpenseDataHandler}
